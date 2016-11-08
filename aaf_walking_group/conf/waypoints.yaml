@@ -3,9 +3,9 @@ slow:
     waypoints:
         1:
             resting:
-                "Kindergarten"
+                "WalkingGruppeStart"
             asking:
-                "Kindergarten"
+                "WalkingGruppeStart"
             resting_tag:
                 "Start"
         2: 
@@ -77,9 +77,9 @@ slow:
                 "Ambulanz"
         8:
             resting:
-                "Kindergarten"
+                "WalkingGruppeStart"
             asking:
-                "Kindergarten"
+                "WalkingGruppeStart"
             intermediate:
                 1: "WayPoint88"
             resting_tag:
@@ -89,9 +89,9 @@ fast:
     waypoints:
         1:
             resting:
-                "Kindergarten"
+                "WalkingGruppeStart"
             asking:
-                "Kindergarten"
+                "WalkingGruppeStart"
             resting_tag:
                 "Start"
         2: 
@@ -162,9 +162,9 @@ fast:
                 "Ambulanz"
         8:
             resting:
-                "Kindergarten"
+                "WalkingGruppeStart"
             asking:
-                "Kindergarten"
+                "WalkingGruppeStart"
             intermediate:
                 1: "WayPoint88"
             resting_tag:

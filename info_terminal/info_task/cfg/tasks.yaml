@@ -1,7 +1,7 @@
 info_terminal_start:
     location: "ChargingPoint"
     parameters:
-        maxTaskNumber: 2
+        maxTaskNumber: 5
 info_terminal_stop:
     location: "ChargingPoint"
     parameters:
