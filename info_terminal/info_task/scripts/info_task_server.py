@@ -58,8 +58,9 @@ class InfoTaskServer(AbstractTaskServer):
                 'http://localhost:8080/')
 
         rate = rospy.Rate(1)
+        self.auto_preempt = False
         # preempt will not be requested while activity is happening
-        while not rospy.is_shutdown() and not self.server.is_preempt_requested():
+        while not rospy.is_shutdown() and not self.server.is_preempt_requested() and not self.auto_preempt:
             # loop for duration
             if self.reset_time < rospy.Time.now().to_sec():
                 self.interruptible = True
@@ -71,7 +72,7 @@ class InfoTaskServer(AbstractTaskServer):
         self.gaze.preempt()
         self.head.resetHead()
 
-        if not self.server.is_preempt_requested():
+        if not self.server.is_preempt_requested() and not self.auto_preempt:
             self.server.set_succeeded()
         else:
             self.server.set_preempted()
@@ -97,6 +98,7 @@ class InfoTaskServer(AbstractTaskServer):
     def cancel_info_task_callback(self, msg):
         if msg.data >= 0:
             self.preempt_cb()
+            self.auto_preempt = True
 
 
     def preempt_cb(self):
