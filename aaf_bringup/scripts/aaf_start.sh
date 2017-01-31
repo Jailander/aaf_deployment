@@ -45,7 +45,7 @@ tmux select-window -t $SESSION:4
 tmux send-keys "rosparam set /deployment_language english && HOST_IP=192.168.0.100 DISPLAY=:0 roslaunch aaf_bringup aaf_ui.launch mary_machine:=right-cortex mary_machine_user:=strands"
 
 tmux select-window -t $SESSION:5
-tmux send-keys "DISPLAY=:0 roslaunch aaf_bringup aaf_navigation.launch map:=/opt/strands/maps/WW_GF_2015_02_22-cropped.yaml topological_map:=WW_GF_2015_02_22_3"
+tmux send-keys "DISPLAY=:0 roslaunch aaf_bringup aaf_navigation.launch map:=/opt/strands/maps/WW_lab_2016_09_09-cropped.yaml topological_map:=WW_2016_09_28"
 
 tmux select-window -t $SESSION:6
 tmux send-keys "DISPLAY=:0 roslaunch perception_people_launch people_tracker_robot.launch machine:=left-cortex user:=strands"
